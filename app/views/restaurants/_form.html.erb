@@ -6,11 +6,11 @@
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
-    <!-- <%= f.input :category %> -->
-    <p>Category: <%= f.select :category, options_for_select(["Chinese", "Italian", "Japanese", "French", "Belgian"]) %></p>
+    <%= f.input :category, collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"] %>
+    <!-- <p>Category: <%= f.select :category, options_for_select(["Chinese", "Italian", "Japanese", "French", "Belgian"]) %></p> -->
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.submit "Create restaurant" %>
   </div>
 <% end %>
